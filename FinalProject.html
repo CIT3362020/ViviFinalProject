@@ -1,0 +1,38 @@
+<html>
+<head>
+	<script type="text/javascript">
+		function DailySales(chocolate, vanila, strawberry, day)
+        {
+          this.choc = chocolate;
+          this.van = vanila;
+          this.straw = strawberry
+          this.day = day;
+          this.calculateTotal = function()
+          {
+         	 return (this.choc + this.van + this.straw);
+          }
+		  this.displayDetails = function()
+		  {
+            document.write("Day " + this.day + "<br />");
+            document.write("Chocolate Scoops sold: " + this.choc + "<br />");
+            document.write("Vanilla Scoops sold: " + this.van + "<br />");
+            document.write("Strawberry Scoops sold: " + this.straw + "<br />");
+            var sum = this.calculateTotal();
+            document.write("Total Scoops sold: " + sum + "<br /><br />");
+		  }
+		}
+        var day1 = new DailySales(54, 13, 32, 1);
+        var day2 = new DailySales(32, 45, 13, 2);
+        var day3 = new DailySales(65, 32, 16, 3);
+        var day4 = new DailySales(47, 65, 17, 4);
+        var day5 = new DailySales(130, 122, 187, 5);
+        day1.displayDetails();
+        day2.displayDetails();
+        day3.displayDetails();
+        day4.displayDetails();
+        day5.displayDetails();
+	</script>
+</head>
+<body>
+</body>
+</html>
